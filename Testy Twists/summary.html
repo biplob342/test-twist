@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order History | Testy Twists</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html" class="logo-link" aria-label="Go to homepage">
+          <img src="image/logo_cream.png" alt="Testy Twists Logo" class="logo-image">
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-navigation" id="mainNav">
+        <ul>
+          <li><a href="index.html" class="nav-button"><i class="fas fa-home"></i><span class="nav-text">Home</span></a>
+          </li>
+          <li><a href="menu.html" class="nav-button"><i class="fas fa-utensils"></i><span
+                class="nav-text">Menu</span></a></li>
+          <li><a href="cart.html" class="nav-button">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count" style="display: none;">0</span>
+              <span class="nav-text">Cart</span>
+            </a></li>
+          <li><a href="summary.html" class="nav-button"><i class="fas fa-receipt"></i><span
+                class="nav-text">Orders</span></a></li>
+          <li><a href="about us.html" class="nav-button"><i class="fas fa-info-circle"></i><span class="nav-text">About
+                Us</span></a></li>
+          <li><a href="contact.html" class="nav-button"><i class="fas fa-envelope"></i><span
+                class="nav-text">Contact</span></a></li>
+          <li><a href="login.html" class="nav-button"><i class="fas fa-user"></i><span class="nav-text">Login</span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-title-section">
+      <h2>Order History</h2>
+    </section>
+
+    <section class="summary-content-section">
+      <div class="summary-container">
+
+        <!-- Latest Order Confirmation (shown only if coming from checkout) -->
+        <div class="order-confirmation-message success-message" id="confirmationMessage" style="display: none;">
+          <div class="confirmation-icon success-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h3>Order Placed Successfully!</h3>
+          <p>Thank you! Your order has been confirmed and is being prepared with care.</p>
+          <div class="success-details" id="successOrderDetails">
+            <!-- Order details will be inserted here -->
+          </div>
+        </div>
+
+        <!-- Order History Stats -->
+        <div class="order-stats">
+          <div class="stat-card">
+            <i class="fas fa-shopping-bag"></i>
+            <div class="stat-info">
+              <h4 id="totalOrders">0</h4>
+              <p>Total Orders</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-coins"></i>
+            <div class="stat-info">
+              <h4 id="totalSpent">৳ 0</h4>
+              <p>Total Spent</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-clock"></i>
+            <div class="stat-info">
+              <h4 id="lastOrderDate">N/A</h4>
+              <p>Last Order</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Order History List -->
+        <div class="order-history-section">
+          <div class="section-header">
+            <h3>Your Orders</h3>
+            <button class="clear-history-btn" id="clearHistoryBtn">
+              <i class="fas fa-trash-alt"></i> Clear History
+            </button>
+          </div>
+
+          <!-- Empty State -->
+          <div class="empty-orders-state" id="emptyOrdersState">
+            <div class="empty-icon">
+              <i class="fas fa-receipt"></i>
+            </div>
+            <h3>No Orders Yet</h3>
+            <p>You haven't placed any orders yet. Start ordering now!</p>
+            <a href="menu.html" class="browse-menu-btn">
+              <i class="fas fa-utensils"></i> Browse Menu
+            </a>
+          </div>
+
+          <!-- Orders List Container -->
+          <div class="orders-list" id="ordersListContainer">
+            <!-- Orders will be dynamically inserted here -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section footer-brand">
+        <h2>Testy Twists</h2>
+        <p class="footer-tagline">Fresh Food, Fast Delivery</p>
+        <p class="footer-description">
+          Delivering delicious meals from the best restaurants to your doorstep with speed and care.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="summary.html">Orders</a></li>
+          <li><a href="about us.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul class="footer-contact-info">
+          <li>
+            <strong>Address:</strong>
+            5/12, Zilla Sadar Road, Muslim Para
+            Tangail, Dhaka
+          </li>
+          <li>
+            <strong>Phone:</strong>
+            <a href="tel:01*********">01*********</a>
+          </li>
+          <li>
+            <strong>Email:</strong>
+            <a href="mailto:testytwist@gmail.com">testytwist@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="footer-social">
+          <a href="https://facebook.com" class="social-icon" aria-label="Facebook" target="_blank" rel="noopener">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com" class="social-icon" aria-label="Twitter" target="_blank" rel="noopener">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://linkedin.com" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2025 Testy Twists. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mainNav = document.getElementById('mainNav');
+    const menuBackdrop = document.getElementById('menuBackdrop');
+
+    hamburger.addEventListener('click', function (e) {
+      e.stopPropagation();
+      mainNav.classList.toggle('active');
+      hamburger.classList.toggle('active');
+      menuBackdrop.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a nav link
+    const navLinks = document.querySelectorAll('.nav-button');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        mainNav.classList.remove('active');
+        hamburger.classList.remove('active');
+        menuBackdrop.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking the backdrop
+    menuBackdrop.addEventListener('click', function () {
+      mainNav.classList.remove('active');
+      hamburger.classList.remove('active');
+      menuBackdrop.classList.remove('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function (e) {
+      if (mainNav.classList.contains('active') && !mainNav.contains(e.target)) {
+        mainNav.classList.remove('active');
+        hamburger.classList.remove('active');
+        menuBackdrop.classList.remove('active');
+      }
+    });
+
+    // Prevent menu from closing when clicking inside it
+    mainNav.addEventListener('click', function (e) {
+      e.stopPropagation();
+    });
+  </script>
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="./js/data.js"></script>
+  <script src="./js/cart.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/scrollToTop.js"></script>
+  <script>
+    // Display order history from localStorage (Note: initialization at bottom)
+
+    /**
+     * Check if this is a new order (coming from checkout)
+     */
+    function checkIfNewOrder() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const isNewOrder = urlParams.get('new');
+
+      if (isNewOrder === 'true') {
+        const confirmationMessage = document.getElementById('confirmationMessage');
+        const successOrderDetails = document.getElementById('successOrderDetails');
+
+        if (confirmationMessage) {
+          // Get the last order
+          const lastOrder = JSON.parse(localStorage.getItem('lastOrder') || 'null');
+
+          // Display success message
+          confirmationMessage.style.display = 'block';
+
+          // Add order details to success message
+          if (lastOrder && successOrderDetails) {
+            const itemCount = lastOrder.items.reduce((total, item) => total + item.quantity, 0);
+            successOrderDetails.innerHTML = `
+            <div class="success-detail-row">
+              <span>Order Number:</span>
+              <strong>${lastOrder.orderNumber}</strong>
+            </div>
+            <div class="success-detail-row">
+              <span>Items:</span>
+              <strong>${itemCount} ${itemCount === 1 ? 'item' : 'items'}</strong>
+            </div>
+            <div class="success-detail-row">
+              <span>Payment Method:</span>
+              <strong>${lastOrder.customerInfo.paymentMethod === 'cash' ? 'Cash on Delivery' : 'Online Payment'}</strong>
+            </div>
+            <div class="success-detail-row total-row">
+              <span>Total Amount:</span>
+              <strong>৳ ${lastOrder.pricing.total}</strong>
+            </div>
+          `;
+          }
+
+          // Remove the query parameter from URL without reloading
+          window.history.replaceState({}, document.title, 'summary.html');
+
+          // Scroll to top to show the success message
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+
+          // Hide message after 8 seconds
+          setTimeout(() => {
+            confirmationMessage.style.transition = 'opacity 0.5s ease-out';
+            confirmationMessage.style.opacity = '0';
+            setTimeout(() => {
+              confirmationMessage.style.display = 'none';
+              confirmationMessage.style.opacity = '1';
+            }, 500);
+          }, 8000);
+        }
+      }
+    }
+
+    /**
+     * Display all order history
+     */
+    function displayOrderHistory() {
+      const orderHistory = JSON.parse(localStorage.getItem('orderHistory') || '[]');
+      const ordersListContainer = document.getElementById('ordersListContainer');
+      const emptyOrdersState = document.getElementById('emptyOrdersState');
+
+      if (orderHistory.length === 0) {
+        ordersListContainer.style.display = 'none';
+        emptyOrdersState.style.display = 'flex';
+        return;
+      }
+
+      ordersListContainer.style.display = 'block';
+      emptyOrdersState.style.display = 'none';
+
+      ordersListContainer.innerHTML = orderHistory.map((order, index) => {
+        const orderDate = new Date(order.orderDate);
+        const formattedDate = orderDate.toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        });
+
+        const itemCount = order.items.reduce((total, item) => total + item.quantity, 0);
+
+        return `
+        <div class="order-card" data-index="${index}">
+          <div class="order-card-header">
+            <div class="order-header-info">
+              <h4>${order.orderNumber}</h4>
+              <span class="order-date">${formattedDate}</span>
+            </div>
+            <div class="order-header-actions">
+              <span class="order-status status-${order.status}">${getStatusLabel(order.status)}</span>
+              <button class="toggle-order-btn" data-index="${index}">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="order-card-summary">
+            <div class="order-summary-info">
+              <span><i class="fas fa-shopping-bag"></i> ${itemCount} ${itemCount === 1 ? 'item' : 'items'}</span>
+              <span><i class="fas fa-wallet"></i> ৳ ${order.pricing.total}</span>
+              <span><i class="fas fa-credit-card"></i> ${order.customerInfo.paymentMethod === 'cash' ? 'Cash on Delivery' : 'Online Payment'}</span>
+            </div>
+          </div>
+
+          <div class="order-card-details" id="orderDetails${index}" style="display: none;">
+            <div class="order-details-section">
+              <h5>Order Items</h5>
+              <div class="order-items-list">
+                ${order.items.map(item => `
+                  <div class="order-item-row">
+                    <div class="item-image-small">
+                      <img src="${item.image}" alt="${item.name}" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'50\\' height=\\'50\\'%3E%3Crect fill=\\'%23f0f0f0\\' width=\\'50\\' height=\\'50\\'/%3E%3Ctext x=\\'50%25\\' y=\\'50%25\\' font-size=\\'20\\' text-anchor=\\'middle\\' dy=\\'.3em\\'%3E🍴%3C/text%3E%3C/svg%3E'">
+                    </div>
+                    <div class="item-info">
+                      <span class="item-name">${item.name}</span>
+                      <span class="item-quantity">Qty: ${item.quantity}</span>
+                    </div>
+                    <div class="item-price">৳ ${item.price * item.quantity}</div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <div class="order-details-section">
+              <h5>Delivery Information</h5>
+              <div class="delivery-details">
+                <p><i class="fas fa-user"></i> ${order.customerInfo.name}</p>
+                <p><i class="fas fa-phone"></i> ${order.customerInfo.phone}</p>
+                <p><i class="fas fa-map-marker-alt"></i> ${order.customerInfo.address}</p>
+              </div>
+            </div>
+
+            <div class="order-details-section">
+              <h5>Payment Breakdown</h5>
+              <div class="pricing-details">
+                <div class="pricing-row">
+                  <span>Subtotal:</span>
+                  <span>৳ ${order.pricing.subtotal}</span>
+                </div>
+                <div class="pricing-row">
+                  <span>Delivery Fee:</span>
+                  <span>৳ ${order.pricing.deliveryFee}</span>
+                </div>
+                <div class="pricing-row">
+                  <span>Tax (5%):</span>
+                  <span>৳ ${order.pricing.tax}</span>
+                </div>
+                <div class="pricing-row total">
+                  <span><strong>Total:</strong></span>
+                  <span><strong>৳ ${order.pricing.total}</strong></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="order-card-actions">
+              <button class="reorder-btn" data-index="${index}">
+                <i class="fas fa-redo"></i> Reorder
+              </button>
+              <button class="delete-order-btn" data-index="${index}">
+                <i class="fas fa-trash-alt"></i> Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+      }).join('');
+
+      // Setup toggle buttons
+      setupToggleButtons();
+      setupReorderButtons();
+      setupDeleteButtons();
+    }
+
+    /**
+     * Get status label
+     */
+    function getStatusLabel(status) {
+      const labels = {
+        'pending': 'Pending',
+        'preparing': 'Preparing',
+        'on_the_way': 'On the Way',
+        'delivered': 'Delivered',
+        'cancelled': 'Cancelled'
+      };
+      return labels[status] || 'Pending';
+    }
+
+    /**
+     * Setup toggle buttons for order details
+     */
+    function setupToggleButtons() {
+      const toggleButtons = document.querySelectorAll('.toggle-order-btn');
+      toggleButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const index = this.getAttribute('data-index');
+          const detailsSection = document.getElementById(`orderDetails${index}`);
+          const icon = this.querySelector('i');
+
+          if (detailsSection.style.display === 'none') {
+            detailsSection.style.display = 'block';
+            icon.classList.remove('fa-chevron-down');
+            icon.classList.add('fa-chevron-up');
+          } else {
+            detailsSection.style.display = 'none';
+            icon.classList.remove('fa-chevron-up');
+            icon.classList.add('fa-chevron-down');
+          }
+        });
+      });
+    }
+
+    /**
+     * Setup reorder buttons
+     */
+    function setupReorderButtons() {
+      const reorderButtons = document.querySelectorAll('.reorder-btn');
+      reorderButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const index = parseInt(this.getAttribute('data-index'));
+          const orderHistory = JSON.parse(localStorage.getItem('orderHistory') || '[]');
+          const order = orderHistory[index];
+
+          if (order && order.items) {
+            // Clear current cart
+            localStorage.removeItem('cart');
+
+            // Add all items from this order to cart
+            localStorage.setItem('cart', JSON.stringify(order.items));
+
+            // Show notification
+            if (typeof showNotification === 'function') {
+              showNotification('Items added to cart!');
+            } else {
+              alert('Items added to cart!');
+            }
+
+            // Redirect to cart page
+            setTimeout(() => {
+              window.location.href = 'cart.html';
+            }, 1000);
+          }
+        });
+      });
+    }
+
+    /**
+     * Setup delete order buttons
+     */
+    function setupDeleteButtons() {
+      const deleteButtons = document.querySelectorAll('.delete-order-btn');
+      deleteButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          if (confirm('Are you sure you want to delete this order from your history?')) {
+            const index = parseInt(this.getAttribute('data-index'));
+            let orderHistory = JSON.parse(localStorage.getItem('orderHistory') || '[]');
+
+            // Remove the order
+            orderHistory.splice(index, 1);
+            localStorage.setItem('orderHistory', JSON.stringify(orderHistory));
+
+            // Refresh display
+            displayOrderHistory();
+            updateOrderStats();
+
+            if (typeof showNotification === 'function') {
+              showNotification('Order deleted from history');
+            }
+          }
+        });
+      });
+    }
+
+    /**
+     * Update order statistics
+     */
+    function updateOrderStats() {
+      const orderHistory = JSON.parse(localStorage.getItem('orderHistory') || '[]');
+
+      const totalOrders = orderHistory.length;
+      const totalSpent = orderHistory.reduce((sum, order) => sum + order.pricing.total, 0);
+
+      let lastOrderDate = 'N/A';
+      if (orderHistory.length > 0) {
+        const lastOrder = new Date(orderHistory[0].orderDate);
+        lastOrderDate = lastOrder.toLocaleDateString('en-US', {
+          month: 'short',
+          day: 'numeric'
+        });
+      }
+
+      document.getElementById('totalOrders').textContent = totalOrders;
+      document.getElementById('totalSpent').textContent = `৳ ${totalSpent}`;
+      document.getElementById('lastOrderDate').textContent = lastOrderDate;
+    }
+
+    /**
+     * Setup clear history button
+     */
+    function setupClearHistoryButton() {
+      const clearHistoryBtn = document.getElementById('clearHistoryBtn');
+      if (clearHistoryBtn) {
+        clearHistoryBtn.addEventListener('click', function () {
+          if (confirm('Are you sure you want to clear all order history? This action cannot be undone.')) {
+            localStorage.removeItem('orderHistory');
+            localStorage.removeItem('lastOrder');
+            displayOrderHistory();
+            updateOrderStats();
+
+            if (typeof showNotification === 'function') {
+              showNotification('Order history cleared');
+            }
+          }
+        });
+      }
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function () {
+      displayOrderHistory();
+      updateOrderStats();
+      setupClearHistoryButton();
+      checkIfNewOrder();
+    });
+  </script>
+
+</body>
+
+</html>

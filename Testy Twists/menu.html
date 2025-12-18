@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Testy Twists</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html" class="logo-link" aria-label="Go to homepage">
+          <img src="./image/logo_cream.png" alt="Testy Twists Logo" class="logo-image">
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-navigation" id="mainNav">
+        <ul>
+          <li><a href="index.html" class="nav-button"><i class="fas fa-home"></i><span class="nav-text">Home</span></a>
+          </li>
+          <li><a href="menu.html" class="nav-button"><i class="fas fa-utensils"></i><span
+                class="nav-text">Menu</span></a></li>
+          <li><a href="cart.html" class="nav-button">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count" style="display: none;">0</span>
+              <span class="nav-text">Cart</span>
+            </a></li>
+          <li><a href="summary.html" class="nav-button"><i class="fas fa-receipt"></i><span
+                class="nav-text">Orders</span></a></li>
+          <li><a href="about us.html" class="nav-button"><i class="fas fa-info-circle"></i><span class="nav-text">About
+                Us</span></a></li>
+          <li><a href="contact.html" class="nav-button"><i class="fas fa-envelope"></i><span
+                class="nav-text">Contact</span></a></li>
+          <li><a href="login.html" class="nav-button"><i class="fas fa-user"></i><span class="nav-text">Login</span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-title-section">
+      <h2>Menu</h2>
+    </section>
+
+    <section class="category-filter-section">
+      <div class="filter-buttons-container">
+        <button class="filter-button active" data-category="all">All</button>
+        <button class="filter-button" data-category="fast-food">Fast Food</button>
+        <button class="filter-button" data-category="drinks">Drinks</button>
+        <button class="filter-button" data-category="desserts">Desserts</button>
+      </div>
+    </section>
+
+    <section class="menu-items-section">
+      <div class="menu-items-grid">
+        <article class="food-card" data-id="1" data-category="fast-food">
+          <div class="food-image">
+            <img src="./image/burger.jpeg" alt="Classic Cheeseburger">
+          </div>
+          <h3>Classic Cheeseburger</h3>
+          <p>Juicy beef patty with melted cheese, lettuce, and tomato</p>
+          <p class="price"><strong>৳</strong> 450</p>
+          <button class="add-to-cart-button">Add to Cart</button>
+        </article>
+
+        <article class="food-card" data-id="2" data-category="fast-food">
+          <div class="food-image">
+            <img src="image/pizza.jpeg" alt="Margherita Pizza">
+          </div>
+          <h3>Margherita Pizza</h3>
+          <p>Fresh mozzarella, basil, and tomato sauce on crispy crust</p>
+          <p class="price"><strong>৳</strong> 650</p>
+          <button class="add-to-cart-button">Add to Cart</button>
+        </article>
+
+        <article class="food-card" data-id="3" data-category="fast-food">
+          <div class="food-image">
+            <img src="image/chickenlollypop.jpeg" alt="Chiken Drum Stick">
+          </div>
+          <h3>Chiken Drum Stick</h3>
+          <p>Grilled Chicken with smash potato, mustard, and relish</p>
+          <p class="price"><strong>৳</strong> 320</p>
+          <button class="add-to-cart-button">Add to Cart</button>
+        </article>
+
+        <article class="food-card" data-id="4" data-category="fast-food">
+          <div class="food-image">
+            <img src="image/friedrice.jpeg" alt="Fried Rice">
+          </div>
+          <h3>Fried Rice</h3>
+          <p>Golden fried potatoes with a side of ketchup</p>
+          <p class="price"><strong>৳</strong> 250</p>
+          <button class="add-to-cart-button">Add to Cart</button>
+        </article>
+
+        <article class="food-card" data-id="5" data-category="drinks">
+          <div class="food-image">
+            <img src="image/drinks3.jpeg" alt="Virgin Blue Mojito">
+          </div>
+          <h3>Virgin Blue Mojito</h3>
+          <p>Refreshing carbonated soft drink</p>
+          <p class="price"><strong>৳</strong> 180</p>
+          <button class="add-to-cart-button">Add to Cart</button>
+        </article>
+
+        <article class="food-card" data-id="6" data-category="drinks">
+          <div class="food-image">
+            <img src="image/drinks4.jpeg" alt="Fresh Lemonade">
+          </div>
+          <h3>Fresh Lemonade</h3>
+          <p>Homemade lemonade with real lemons</p>
+          <p class="price"><strong>৳</strong> 140</p>
+          <button class="add-to-cart-button">Add to Cart</button>
+        </article>
+
+        <article class="food-card" data-id="7" data-category="drinks">
+          <div class="food-image">
+            <img src="image/drinks2.jpeg" alt="Berry Smoothie">
+          </div>
+          <h3>Classic Orange Juice</h3>
+          <p>Fresh orange juice with real oranges</p>
+          <p class="price"><strong>৳</strong> 280</p>
+          <button class="add-to-cart-button">Add to Cart</button>
+        </article>
+
+        <article class="food-card" data-id="8" data-category="drinks">
+          <div class="food-image">
+            <img src="image/coldcoffe.jpeg" alt="Iced Coffee">
+          </div>
+          <h3>Iced Chocklete Coffee</h3>
+          <p>Cold brew coffee with ice and cream and chocolate</p>
+          <p class="price"><strong>৳</strong> 160</p>
+          <button class="add-to-cart-button">Add to Cart</button>
+        </article>
+
+        <article class="food-card" data-id="9" data-category="desserts">
+          <div class="food-image">
+            <img src="image/shake3.jpeg" alt="Chocolate Oreo Shake">
+          </div>
+          <h3>Chocolate Oreo Shake</h3>
+          <p>Chocolate Oreo Shake with ice cream and chocolate</p>
+          <p class="price"><strong>৳</strong> 280</p>
+          <button class="add-to-cart-button">Add to Cart</button>
+        </article>
+
+        <article class="food-card" data-id="10" data-category="desserts">
+          <div class="food-image">
+            <img src="image/shake.jpeg" alt="Strawberry Ice Cream">
+          </div>
+          <h3>Strawberry Ice Cream</h3>
+          <p>Creamy strawberry ice cream with strawberry sauce</p>
+          <p class="price"><strong>৳</strong> 250</p>
+          <button class="add-to-cart-button">Add to Cart</button>
+        </article>
+
+        <article class="food-card" data-id="11" data-category="desserts">
+          <div class="food-image">
+            <img src="image/cheesecake.jpg" alt="New York Cheesecake">
+          </div>
+          <h3>New York Cheesecake</h3>
+          <p>Rich and creamy cheesecake with graham cracker crust</p>
+          <p class="price"><strong>৳</strong> 320</p>
+          <button class="add-to-cart-button">Add to Cart</button>
+        </article>
+
+        <article class="food-card" data-id="12" data-category="desserts">
+          <div class="food-image">
+            <img src="image/briwnies.webp" alt="Fudge Brownie">
+          </div>
+          <h3>Fudge Brownie</h3>
+          <p>Dense chocolate brownie with walnuts</p>
+          <p class="price"><strong>৳</strong> 280</p>
+          <button class="add-to-cart-button">Add to Cart</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section footer-brand">
+        <h2>Testy Twists</h2>
+        <p class="footer-tagline">Fresh Food, Fast Delivery</p>
+        <p class="footer-description">
+          Delivering delicious meals from the best restaurants to your doorstep with speed and care.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="summary.html">Orders</a></li>
+          <li><a href="about us.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <ul class="footer-contact-info">
+          <li>
+            <strong>Address:</strong>
+            5/12, Zilla Sadar Road, Muslim Para<br>Tangail, Dhaka
+          </li>
+          <li>
+            <strong>Phone:</strong>
+            <a href="tel:01*********">01*********</a>
+          </li>
+          <li>
+            <strong>Email:</strong>
+            <a href="mailto:testytwist@gmail.com">testytwist@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="footer-social">
+          <a href="https://facebook.com" class="social-icon" aria-label="Facebook" target="_blank" rel="noopener">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com" class="social-icon" aria-label="Twitter" target="_blank" rel="noopener">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://linkedin.com" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2025 Testy Twists. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mainNav = document.getElementById('mainNav');
+    const menuBackdrop = document.getElementById('menuBackdrop');
+
+    hamburger.addEventListener('click', function (e) {
+      e.stopPropagation();
+      mainNav.classList.toggle('active');
+      hamburger.classList.toggle('active');
+      menuBackdrop.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a nav link
+    const navLinks = document.querySelectorAll('.nav-button');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        mainNav.classList.remove('active');
+        hamburger.classList.remove('active');
+        menuBackdrop.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking the backdrop
+    menuBackdrop.addEventListener('click', function () {
+      mainNav.classList.remove('active');
+      hamburger.classList.remove('active');
+      menuBackdrop.classList.remove('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function (e) {
+      if (mainNav.classList.contains('active') && !mainNav.contains(e.target)) {
+        mainNav.classList.remove('active');
+        hamburger.classList.remove('active');
+        menuBackdrop.classList.remove('active');
+      }
+    });
+
+    // Prevent menu from closing when clicking inside it
+    mainNav.addEventListener('click', function (e) {
+      e.stopPropagation();
+    });
+  </script>
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="./js/cart.js"></script>
+  <script src="./js/data.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/scrollToTop.js"></script>
+</body>
+
+</html>
